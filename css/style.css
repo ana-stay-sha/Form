@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    max-width: 1172px;
+    height: 317px;
+    margin: 0 auto;
+}
+h1{
+    width: 392px;
+    height: 83px;
+    font-family: Rozha One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 70px;
+    line-height: 99px;
+    color: #3D3161;
+    margin-bottom: 22px;
+}
+
+form{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.block-570{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    max-width: 570px;
+    width: 50%;
+}
+.row{
+    display: block;
+    width: 100%;
+    height: 50px;
+}
+input[type=text]{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+    line-height: 19px;
+    color: #999999;
+    border: none;
+    border-bottom: 0.5px solid #999999;
+    width: 100%;
+    padding-bottom: 5px;
+}
+input[type="text"]:focus { 
+    outline: none; 
+}
+
+.project-description{
+    margin-left: 30px;
+}
+.project-description label, p{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+    line-height: 19px;
+    color: #999999;
+    margin: 0 0 5px 0;
+}
+.project-description textarea{
+    width: 100%;
+    height: 102px;
+}
+
+.checkbox-button{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+input[type="checkbox"]{
+    width: 16px;
+    margin: 0 14px 0 2px;
+}
+.checkbox-block{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 60%;
+}
+.validateBtn{
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    color: #3D3161;
+    padding: 12px 42px 13px;
+    height: 41px;
+    background: #C1E457;
+    border-radius: 30px;
+    border: none;
+}
+
+ /* верстка заняла примерно 3 часа  */
+
+ @media screen and (max-width: 480px){
+     .container{
+        height: 100%;
+     }
+     form{
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+     }
+     h1{
+        width: 42%;
+        height: 51px;
+        font-size: 36px;
+        line-height: 51px;
+        margin-bottom: 15px;
+     }
+     .block-570{
+        width: 100%;
+     }
+     
+    .project-description{
+        margin: 0;
+    }
+    .project-description textarea{
+        height: 195px;
+    }
+    .checkbox-button{
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding-top: 5px;
+    }
+    .checkbox-block{
+        width: 95%;
+    }
+    .validateBtn{
+        width: 100%;
+        margin-top: 20px;
+        color: #999999;
+        padding: 12px 42px 13px;
+        height: 41px;
+        background: #fff;
+        border: 1px solid #E5E5E5;
+    }
+ }
+
+ @media screen and (max-width: 920px){
+    .container{
+       height: 100%;
+    }
+   .checkbox-button{
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+       padding-top: 5px;
+   }
+   .checkbox-block{
+       width: 95%;
+   }
+   .validateBtn{
+       width: 100%;
+       color: #999999;
+       padding: 12px 42px 13px;
+       height: 41px;
+       background: #fff;
+       border: 1px solid #E5E5E5;
+   }
+}
