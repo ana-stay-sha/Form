@@ -1,6 +1,6 @@
 
-let form = document.querySelector('.formWithValidation');
-let validateBtn = form.querySelector('.validateBtn');
+const form = document.querySelector('.formWithValidation');
+const validateBtn = form.querySelector('.validateBtn');
 let fields = form.querySelectorAll('.field');
 
 

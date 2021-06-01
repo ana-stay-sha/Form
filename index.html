@@ -16,37 +16,40 @@
 <body>
 
     <div class="container">
-        <h1>Contact us</h1>
-        <form class="formWithValidation">
+        <h1 class="container__title">Contact us</h1>
+        <form class="formWithValidation form">
 
-            <div class="block-570">
-                <div class="row">
-                    <input type="text" id="fname" name="fulltname" class="field" placeholder="Full Name" >
+            <div class="form__grid form-grid">
+                <div class="form-grid__row">
+                    <input type="text" id="fname" name="fulltname" placeholder="Full Name" >
                 </div>
 
-                <div class="row">
-                    <input type="text" id="email" name="email" class="field" placeholder="Email" >
+                <div class="form-grid__row">
+                    <input type="text" id="email" name="email" placeholder="Email" >
                 </div>
 
-                <div class="row">
+                <div class="form-grid__row">
                     <input type="text" id="company" name="company" placeholder="Company">
                 </div>
             </div>
 
-            <div class="project-description block-570">
+            <div class="project-description form__grid">
                 <div>
                     <p>Project description</p>
                     <textarea name="description" id="description"></textarea>
                 </div>
 
-                <div class="checkbox-button">
-                    <div class="checkbox-block">
+                <div class="description__grid description-grid">
+
+                    <div class="description-grid__checkbox">
                         <input type="checkbox" id="checkbox" />
                         <label for="checkbox">I consent to having Calaton Systems LLC collect and process my personal details according to its Privacy Policy.</label>              
                     </div>
-                    <div>
+
+                    <div class="description-grid__button">
                         <button type="submit" class='validateBtn'>Contact us</button>
                     </div>  
+
                 </div>
                 
             </div>
