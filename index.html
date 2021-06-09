@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Rozha+One&display=swap" rel="stylesheet">
@@ -14,49 +15,53 @@
     <title>Calaton</title>
 </head>
 <body>
+   
+    <section class="contact-us">
+        <h1 class="contact-us__title">Contact us</h1>
 
-    <div class="container">
-        <h1 class="container__title">Contact us</h1>
         <form class="formWithValidation form">
 
-            <div class="form__grid form-grid">
-                <div class="form-grid__row">
-                    <input type="text" id="fname" name="fulltname" placeholder="Full Name" >
+            <div class="form__block contact-us__inputs">
+                <div class="one"> 
+                    <input class="contact-us__input" type="text" id="fullname" name="fullname" placeholder="Full Name" title="Username must be atleast 2 charactrs long">
+                    <span class="error-message"></span>
                 </div>
-
-                <div class="form-grid__row">
-                    <input type="text" id="email" name="email" placeholder="Email" >
+                <div class="one">
+                    <input class="contact-us__input" type="text" id="email" name="email" placeholder="Email" >
+                    <span class="error-message"></span>
                 </div>
-
-                <div class="form-grid__row">
-                    <input type="text" id="company" name="company" placeholder="Company">
+                <div class="one">
+                    <input class="contact-us__input" type="text" id="company" name="company" placeholder="Company">
+                    <span class="error-message"></span>
                 </div>
             </div>
 
-            <div class="project-description form__grid">
-                <div>
-                    <p>Project description</p>
-                    <textarea name="description" id="description"></textarea>
+            <div class="form__block project-description">
+                <div class="project-description__first-block">
+                    <p class="project-description__title" >Project description</p>
+                    <textarea class="project-description__textarea contact-us__input" name="description" id="description"></textarea>
+                    <span class="error-message"></span>
                 </div>
 
-                <div class="description__grid description-grid">
+                <div class="project-description__second-block">
 
-                    <div class="description-grid__checkbox">
-                        <input type="checkbox" id="checkbox" />
-                        <label for="checkbox">I consent to having Calaton Systems LLC collect and process my personal details according to its Privacy Policy.</label>              
+                    <div class="project-description__consent-blocks">
+                        <div class="project-description__consent">
+                            <input type="checkbox" id="checkbox" class="custom-checkbox" />
+                            <label class="project-description__label" for="checkbox">I consent to having Calaton Systems LLC collect and process my personal details according to its Privacy Policy.</label>              
+                        </div>
+                        <span class="error-message"></span>
                     </div>
 
-                    <div class="description-grid__button">
-                        <button type="submit" class='validateBtn'>Contact us</button>
+                    <div class="project-description__button">
+                        <button type="submit" class="form__submit-btn disabled">Contact us</button>
                     </div>  
-
+         
                 </div>
-                
             </div>
-            
-        </form>
-    </div>
 
+        </form>
+    </section>
     <script src="script/script.js"></script>
 </body>
 </html>

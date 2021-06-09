@@ -1,34 +1,37 @@
-* {
-    margin: 0;
-    padding: 0;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+:root{
+    --RozhaOne: Rozha One;
+    --Josefin: 'Josefin Sans', sans-serif;
+    --Roboto:  Roboto, sans-serif;
+    --sizeTextDeckstop: 18px;
+    --sizeTextMobile: 16px;
+    --colorText: #999999;
+    --bgColorBtn: #C1E457;
 }
-.container{
+.contact-us{
     width: 100%;
-    max-width: 1172px;
-    height: 317px;
+    height: 100%;
     margin: 0 auto;
     padding: 10px;
 }
-.container__title{
-    width: 392px;
-    height: 83px;
-    font-family: Rozha One;
+.contact-us__title{
+    width: 200px;
+    height: 50px;
+    font-family: var(--RozhaOne);
     font-style: normal;
     font-weight: normal;
-    font-size: 70px;
-    line-height: 99px;
+    font-size: 36px;
+    line-height: 51px;
+    margin-bottom: 25px;
     color: #3D3161;
-    margin-bottom: 22px;
 }
-
 form{
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-}
-.form__grid{
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+ }
+.form__block{
+    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -36,149 +39,209 @@ form{
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    max-width: 570px;
-    width: 50%;
 }
-.form-grid__row{
+.contact-us__input{
     display: block;
     width: 100%;
-    height: 50px;
-}
-input[type=text]{
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 18px;
-    line-height: 19px;
-    color: #999999;
+    height: 27px;
+    font-family: var(--Josefin);
+    font-size: var(--sizeTextMobile);
+    font-weight: 600;
+    line-height: 24px;
+    color: #000000;
     border: none;
     border-bottom: 0.5px solid #999999;
-    width: 100%;
-    padding-bottom: 5px;
 }
-input[type="text"]:focus { 
+.contact-us__input::placeholder{
+    color: var(--colorText);
+    font-weight: 400;
+  }
+.contact-us__input:focus { 
     outline: none; 
-}
+} 
 
-.project-description{
-    margin-left: 30px;
+.one{
+    height: 48px;
 }
-.project-description label, p{
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 18px;
+.error-message{
+    font-family: var(--Roboto);
+    font-size: 10px;
+    color: red;
+}
+.project-description__title{
+    font-family: var(--Josefin);
+    font-size: var(--sizeTextMobile);
     line-height: 19px;
-    color: #999999;
+    color: var(--colorText);
     margin: 0 0 5px 0;
 }
-.project-description textarea{
+.project-description__textarea{
+    font-family: var(--Josefin);
+    font-weight: 600;
     width: 100%;
-    height: 102px;
+    height: 195px;
+    border: 0.5px solid #999999;
     resize: none;
+    outline: none;
+}
+.project-description__second-block{
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding-top: 5px;
+}
+.project-description__consent{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
 }
 
-.description__grid{
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    padding-top: 20px;
+.custom-checkbox{
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
 }
-input[type="checkbox"]{
-    width: 28px;
-    margin: 0 12px 0 2px;
+.custom-checkbox+.project-description__label{
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+  }
+.custom-checkbox+.project-description__label::before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid var(--colorText);
+    border-radius: 50px;
+    margin-right: 10px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
 }
-.description-grid__checkbox{
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    width: 60%;
+.custom-checkbox:checked+.project-description__label::before {
+    border-color: var(--bgColorBtn);
+    background-color: var(--bgColorBtn);
+    background-image: url(../image/im.png);
 }
-.validateBtn{
-    font-family: Roboto, sans-serif;
+.custom-checkbox:not(:disabled):not(:checked)+.project-description__label:hover::before {
+    border-color: #5a5a5a;
+}
+
+.project-description__label{
+    font-family: var(--Josefin);
+    font-size: 14px;
+    line-height: 19px;
+    color: var(--colorText);
+}
+.form__submit-btn{
+    width: 100%;
+    margin-top: 20px;    
+    padding: 12px 42px 13px;    
+    height: 41px;
+    background: #fff;
+    border: 1px solid #E5E5E5;
+    font-family: var(--Roboto);
     font-size: 14px;
     line-height: 16px;
     text-align: center;
     color: #3D3161;
-    padding: 12px 42px 13px;
-    height: 41px;
-    background: #C1E457;
     border-radius: 30px;
-    border: none;
+    transition: 0.2s;
 }
-.validateBtn:hover{
+.form__submit-btn:hover{
     background-color: #ceee6f;
+    cursor: pointer;
 }
 
- /* верстка заняла примерно 3 часа  */
 
- @media screen and (max-width: 920px){
-    .container{
-       height: 100%;
-    }
-   .description__grid{
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-       padding-top: 5px;
-   }
-   .description-grid__checkbox{
-       width: 95%;
-   }
-   .validateBtn{
-       width: 100%;
-       color: #999999;
-       padding: 12px 42px 13px;
-       height: 41px;
-       border: 1px solid #E5E5E5;
-   }
-}
-
- @media screen and (max-width: 480px){
-     .container{
-        height: 100%;
-     }
-     form{
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-     }
-     .container__title{
-        width: 42%;
-        height: 51px;
-        font-size: 36px;
-        line-height: 51px;
-        margin-bottom: 15px;
-     }
-     .form__grid{
+@media screen and (min-width: 600px){
+    .contact-us{
         width: 100%;
-     }
-     
+        max-width: 980px;
+    }
+    .contact-us__title{
+        width: 392px;
+        height: 83px;
+        font-size: 54px;
+        line-height: 90px;
+    }
+    form{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        flex-direction: row;
+    }
+    .form__block{
+        width: 50%;
+    }
+    .contact-us__input{
+        font-size: var(--sizeTextDeckstop);
+    }
+    .error-message{
+        font-size: 12px;
+    }
     .project-description{
-        margin: 0;
+        margin-top: 0;
+        margin-left: 10px;
     }
-    .project-description textarea{
-        height: 195px;
+    .project-description__first-block{
+        height: 145px;
     }
-    .description__grid{
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        padding-top: 5px;
+    .project-description__title{
+        font-size: var(--sizeTextDeckstop);
     }
-    .description-grid__checkbox{
-        width: 95%;
+    .project-description__textarea{
+        height: 102px;
     }
-    .validateBtn{
-        width: 100%;
-        margin-top: 20px;
-        color: #999999;
+    .project-description__label{
+        font-size: 16px;
+    }
+    .form__submit-btn{
+        margin-top: 10px;
+        font-size: 14px;
+        line-height: 16px;
+        color: #3D3161;
         padding: 12px 42px 13px;
         height: 41px;
-        background: #fff;
-        border: 1px solid #E5E5E5;
+        width: 100%;
+        background: var(--bgColorBtn);
     }
- }
+}
 
+@media screen and (min-width: 930px){
+    .contact-us{
+        width: 100%;
+        max-width: 100%;
+    }
+    .contact-us__title{
+        width: 392px;
+        height: 83px;
+        font-size: 70px;
+        line-height: 99px;
+        margin-bottom: 22px;
+    }
+    .project-description{
+        margin-left: 30px;
+    }
+    .project-description__second-block{
+        flex-direction: row;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        flex-direction: row;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    }
+    .project-description__consent-blocks{
+        width: 65%;
+    }
+    .form__submit-btn{
+        margin-top: 10px;
+    }
+
+}
